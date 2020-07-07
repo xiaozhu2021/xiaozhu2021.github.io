@@ -17,18 +17,12 @@
      var r = window.location.search.substr(1).match(reg);
      if(r!=null)return  unescape(r[2]); return location.href="https://xiaozhu2021.github.io/404.html";
 }
-
 var name=GetQueryString("n");
-  if(name =null)
+  if(name !=null)
     {
-location.href="https://xiaozhu2021.github.io/404.html";
-     }
-  else
-  {
  document.getElementById("username").innerHTML = "你好," + name
  document.title = '你好，' + name
-  }
-
+     }
 </script>
 </body>
 </html>
