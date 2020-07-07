@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8"> 
-<title>菜鸟教程(runoob.com)</title> 
+<title>读取文件</title> 
 </head>
 <body>
 <div id="textarea"></div>
@@ -10,7 +10,7 @@
 var fso, ts, s ;
 var ForReading = 1;
 fso = new ActiveXObject("Scripting.FileSystemObject");
-ts = fso.OpenTextFile("obscene.json", ForReading);
+ts = fso.OpenTextFile("obscene.txt", ForReading);
 s = ts.ReadLine();
 document.getElementById("textarea").innerHTML=s;
 </script>
