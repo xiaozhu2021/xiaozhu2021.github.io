@@ -2,10 +2,29 @@
 <html>
 <head>
 <meta charset="utf-8"> 
-<title></title> 
-</head>
+<title>你好啊！</title> 
+<script>
+    function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+
+var name=GetQueryString("n");
+if(name !=null && name.toString().length>1)
+{
+ document.getElementById("username").innerHTML = GetQueryString("n") 
+}
+else
+{
+window.location.href="/";
+}
+</script>
 <style>
 </style>
+</head>
 <body>
+  <h1 id="username"></h1><h1>你好啊！</h1>
 </body>
 </html>
