@@ -15,6 +15,15 @@ input[type=text], select {
   box-sizing: border-box;
 }
 
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 input[type=submit] {
   width: 100%;
   background-color: #4CAF50;
@@ -41,12 +50,12 @@ div {
 <h3>登录 / 注册</h3>
 
 <div>
-  <form action="/#/index.html">
+  <form action="https://xiaozhu2021.github.io/#/index.html">
     <label for="fname">Name</label>
     <input type="text" id="n" name="n" placeholder="Your name..">
 
     <label for="lname">Password</label>
-    <input type="text" id="lname" name="p" placeholder="Your password..">
+    <input type="password" id="p" name="p" placeholder="Your password..">
 	  
     <input type="submit" value="登录 / 注册">
   </form>
