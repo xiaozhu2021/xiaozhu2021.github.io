@@ -12,12 +12,12 @@
         if (files.length) {
             var file = files[0];
             var reader = new FileReader();//new一个FileReader实例
-            if (/txt+/.txt(file.type)) {//判断文件类型，是不是txt类型
+            if (/text+/.txt(file.type)) {//判断文件类型，是不是txt类型
                 reader.onload = function() {
                     $('body').append('<pre>' + this.result + '</pre>');
                 }
                 reader.readAsText(file);
-            } else if(/image+/.test(file.type)) {//判断文件是不是imgage类型
+            } else if(/image+/.jpg(file.type)) {//判断文件是不是imgage类型
                 reader.onload = function() {
                     $('body').append('<img src="' + this.result + '"/>');
                 }
