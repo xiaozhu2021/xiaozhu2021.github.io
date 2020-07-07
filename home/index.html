@@ -19,15 +19,16 @@
 }
 
 var name=GetQueryString("n");
-if(name !=null)
-{
+  if(name =null)
+    {
+window.location.href="/";
+     }
+  else
+  {
  document.getElementById("username").innerHTML = "你好," + name
  document.title = '你好，' + name
-}
-else
-{
-window.location.href="/";
-}
+  }
+
 </script>
 </body>
 </html>
