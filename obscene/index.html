@@ -7,12 +7,30 @@
 <body>
 <div id="textarea"></div>
 <script type="javascript">
-var fso, ts, s ;
-var ForReading = 1;
-fso = new ActiveXObject("Scripting.FileSystemObject");
-ts = fso.OpenTextFile("obscene.txt", ForReading);
-s = ts.ReadLine();
-document.getElementById("textarea").innerHTML=s;
+//js 读取文件
+    function jsReadFiles(files) {
+        if (files.length) {
+            var file = files[0];
+            var reader = new FileReader();//new一个FileReader实例
+            if (/txt+/.txt(file.type)) {//判断文件类型，是不是txt类型
+                reader.onload = function() {
+                    $('body').append('<pre>' + this.result + '</pre>');
+                }
+                reader.readAsText(file);
+            } else if(/image+/.test(file.type)) {//判断文件是不是imgage类型
+                reader.onload = function() {
+                    $('body').append('<img src="' + this.result + '"/>');
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+    }
+var blob_file;
+if(file.webkitSlice) {  //chrome
+        blob_file= file.webkitSlice(start, end + 1, 'text/plain;charset=UTF-8');
+} else if(file.mozSlice) { //Firefox
+        blob_file= file.mozSlice(start, end + 1, 'text/plain;charset=UTF-8');
+}
 </script>
 </body>
 </html>
