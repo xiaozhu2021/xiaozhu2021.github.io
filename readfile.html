@@ -17,14 +17,6 @@ body
 {
 	background-color:#ffffff;
 }
-      @media tv {
-            #ad {display:none}
-            }
-      @media print {
-            #ad {display:none}
-            }
-      @media screen {}
-	
     .button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -37,6 +29,22 @@ body
     margin: 4px 2px;
     cursor: pointer;
 }
+	
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+	
+	
+	@media tv {
+            #ad {display:none}
+            }
+        @media print {
+            #ad {display:none}
+            }
 </style>
 </head>
 <body>
