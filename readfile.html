@@ -31,6 +31,19 @@ body
     border-radius: 5px;
 }
 	
+	.fileup {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 .button:hover {background-color: #3e8e41}
 
 .button:active {
@@ -107,7 +120,7 @@ function readAsText(){
 </script>
 <p>
         <label>请选择一个文件：</label>
-	<input type="file" id="file" />
+	<input type="file" class="fileup"id="file" />
 	<button class="button" onclick="readAsDataURL()">读取图像</button>
 	<button class="button" onclick="readAsBinaryString()">读取二进制数据</button>
 	<button class="button" onclick="readAsText()">读取文本文件</button>
