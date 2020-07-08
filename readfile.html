@@ -12,6 +12,19 @@
         <a href="https://www.mozilla.org/zh-CN/firefox/">Firefox</a>
       </div>
     <![endif]-->
+<style>
+body
+{
+	background-color:#ffffff;
+}
+      @media tv {
+            #ad {display:none}
+            }
+      @media print {
+            #ad {display:none}
+            }
+      @media screen {}
+</style>
 </head>
 <body>
 <script type="text/javascript">
@@ -74,5 +87,6 @@ function readAsText(){
     <input type="button" value="读取文本文件" onclick="readAsText()" />
     <div id="result" name="result"></div>
 </p>
+      <div id="ad"><p>aaa</p></div>
 </body>
 </html>
