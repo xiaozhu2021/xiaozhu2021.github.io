@@ -8,13 +8,20 @@
 {
      var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
      var r = window.location.search.substr(1).match(reg);
-     if(r!=null)return  unescape(r[2]); return("Error, reason: no parameters");
+     if(r!=null)return  unescape(r[2]); return;
 }
 var ip=GetQueryString("ip");
+    if (ip !=null)
+    {
 window.location.replace("https://api.uixsj.cn/ip/get?ip=" + ip)
+    }
+    else
+    {
+    document.getElementById("error").innerHTML = "Error!";    
+    }
 </script>
 </head>
 <body>
-
+<pre id="error"></pre>
 </body>
 </html>
