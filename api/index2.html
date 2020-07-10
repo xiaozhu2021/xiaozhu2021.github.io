@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script>
+    function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return("Error, reason: no parameters");
+}
+var url=GetQueryString("url");
+  if(url !=null)
+    {
+ document.getElementById("print").innerHTML = url
+     }
+</head>
+<body>
+<pre id="print">
+{"deta" = "null",
+"msg" = "Please wait a moment！"}
+<pre>
+</body>
+</html>
