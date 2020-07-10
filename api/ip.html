@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title></title>
 <script>
-    function GetQueryString(name)
+/*    function GetQueryString(name)
 {
      var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
      var r = window.location.search.substr(1).match(reg);
@@ -13,11 +13,42 @@
 var ip=GetQueryString("ip");
     if (ip !=null)
     {
-window.location.replace("https://api.uixsj.cn/ip/get?ip=" + ip)
+window.location.replace("https://api.uixsj.cn/ip/get?ip=" + ip) //可能随时掉线
+//备用（126api）：window.location.replace("http://ip.ws.126.net/ipquery?ip=" + ip)
+//备用2（搜狐）：window.location.replace("http://pv.sohu.com/cityjson")
+//备用3(慢，国外的)：window.location.replace("http://ip-api.com/json/")
     }
+*/
+ function GetLocalIPAddress()
+ {
+  var obj = null;
+  var rslt = "";
+  try
+  {
+      obj = new ActiveXObject("rcbdyctl.Setting");
+      rslt = obj.GetIPAddress;
+      obj = null;
+  }
+  catch(e)
+  {
+      //异常发生
+  }      
+  return rslt;
+ }  
+ document.write("你的IP是：bai" + GetLocalIPAddress());
 </script>
 </head>
 <body>
 <pre id="error"></pre>
+<!-- 
+返回格式:
+{
+	"ip": "223.73.193.191",
+	"beginip": "223.73.193.0",
+	"endip": "223.73.193.255",
+	"pos": "广东省中山市",
+	"isp": "移动"
+}
+-->
 </body>
 </html>
