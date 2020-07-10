@@ -19,23 +19,23 @@ window.location.replace("https://api.uixsj.cn/ip/get?ip=" + ip) //可能随时�
 //备用3(慢，国外的)：window.location.replace("http://ip-api.com/json/")
     }
 */
- function GetLocalIPAddress()
- {
-  var obj = null;
-  var rslt = "";
-  try
-  {
-      obj = new ActiveXObject("rcbdyctl.Setting");
-      rslt = obj.GetIPAddress;
-      obj = null;
-  }
-  catch(e)
-  {
-      //异常发生
-  }      
-  return rslt;
- }  
- document.write("你的IP是：bai" + GetLocalIPAddress());
+    function get_ip(cb) {
+        var script = document.createElement("script"),
+            s = document.getElementsByTagName("script")[0];
+        script.src = "http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=jsonp";
+        s.parentNode.insertBefore(script, s);
+        var it = setInterval(function() {
+            if (!!remote_ip_info) {
+                cb(remote_ip_info);
+                remote_ip_info = null;
+                clearInterval(it);
+                it = null;
+            }
+        }, 100);
+    }
+    get_ip(function(info) {
+        alert('你的ip所在地为:' + info.country + info.province + info.city);
+    });
 </script>
 </head>
 <body>
