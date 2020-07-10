@@ -10,14 +10,11 @@
      var r = window.location.search.substr(1).match(reg);
      if(r!=null)return  unescape(r[2]); return("Error, reason: no parameters");
 }
-var url=GetQueryString("url");
- document.getElementById("print").innerHTML = url
+var ip=GetQueryString("ip");
+window.location.replace("https://api.uixsj.cn/ip/get?ip=" + ip)
 </script>
 </head>
 <body>
-<pre id="print">
-{"deta" = "null",
-"msg" = "Please wait a moment！"}
-<pre>
+
 </body>
 </html>
