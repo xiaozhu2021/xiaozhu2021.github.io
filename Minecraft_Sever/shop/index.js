@@ -46,7 +46,4 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var from=GetQueryString("from");
-if(from !=null)
-{
-    console.log("来自" + from)
-}
+if(from !=null){console.log("来自" + from);}
