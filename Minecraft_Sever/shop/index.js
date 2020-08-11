@@ -1,6 +1,6 @@
 function siteTime() {
 window.setTimeout("siteTime()", 1000);
-    }
+}
 var seconds = 1000;
 var minutes = seconds * 60;
 var hours = minutes * 60;
@@ -27,8 +27,7 @@ var diffDays = Math.floor((diff / days) - diffYears * 365);
 var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
 var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
 minutes);
-var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-diffMinutes * minutes) / seconds);
+var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
 if (startYear == todayYear) {
 document.getElementById("year").innerHTML = todayYear;
 }
@@ -42,6 +41,4 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var from=GetQueryString("from");
-if(from !=null)
-{console.log("来自" + from)
-}
+console.log("来自" + from)
