@@ -1,3 +1,4 @@
+/*
 function siteTime() {
 window.setTimeout("siteTime()", 1000);
 }
@@ -32,7 +33,8 @@ if (startYear == todayYear) {
 document.getElementById("year").innerHTML = todayYear;
 }
 setInterval(siteTime, 1000);
-/* ******************************************************* */
+
+*/
 
 function GetQueryString(name)
 {
@@ -41,4 +43,4 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 };
 var from = GetQueryString("from");
-console.log("来自" + from);
+console.log("来自 " + from);
