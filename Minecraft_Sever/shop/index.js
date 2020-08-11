@@ -34,10 +34,7 @@ if (startYear == todayYear) {
 document.getElementById("year").innerHTML = todayYear;
 }
 setInterval(siteTime, 1000);
-
-
-
-
+/* ******************************************************* */
 
 function GetQueryString(name)
 {
@@ -46,4 +43,7 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var from=GetQueryString("from");
-if(from !=null){console.log("来自" + from);}
+if(from !=null) 
+{console.log("来自" + from)
+};
+    
