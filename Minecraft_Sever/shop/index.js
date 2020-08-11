@@ -1,19 +1,18 @@
 function siteTime() {
 window.setTimeout("siteTime()", 1000);
+    }
 var seconds = 1000;
 var minutes = seconds * 60;
 var hours = minutes * 60;
 var days = hours * 24;
 var years = days * 365;
 var today = new Date();
-/*********可以修改 开始**********/
 var startYear = "2020"; //开始日期：年
 var startMonth = "8";//开始日期：月
 var startDate = "1";//开始日期：日
 var startHour = "0";//开始日期：小时
 var startMinute = "0";//开始日期：分钟
 var startSecond = "0";//开始日期：秒
-/*********可以修改 结束**********/
 var todayYear = today.getFullYear();
 var todayMonth = today.getMonth() + 1;
 var todayDate = today.getDate();
@@ -43,7 +42,6 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var from=GetQueryString("from");
-if(from !=null) 
+if(from !=null)
 {console.log("来自" + from)
-};
-    
+}
