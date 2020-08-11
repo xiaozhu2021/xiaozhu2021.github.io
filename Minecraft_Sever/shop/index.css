@@ -1,5 +1,5 @@
 .santa-body {
-    font-size: 80px;     /* 试试改变这里的字体大小，有惊喜！ */
+    font-size: 40px;     /* 试试改变这里的字体大小，有惊喜！ */
     color: #f91047;
     display: -webkit-box;
     display: -webkit-flex;
@@ -206,20 +206,6 @@
     }
 } 
 
-/*
 
-<div class="santa">
-    <div class="santa-body">
-        <div class="santa-head">
-            <div class="santa-ear"></div>
-            <div class="santa-ear"></div>
-            <div class="santa-hat"></div>
-            <div class="santa-eye"></div>
-            <div class="santa-eye"></div>
-            <div class="santa-nose"></div>
-            <div class="santa-mouth"></div>
-        </div>
-    </div>
-</div>
 
-*/
+/* ************************************** */
