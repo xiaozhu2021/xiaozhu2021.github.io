@@ -32,14 +32,7 @@ var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffH
 diffMinutes * minutes) / seconds);
 if (startYear == todayYear) {
 document.getElementById("year").innerHTML = todayYear;
-/*********可以修改 开始**********/
-document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒 ";
-} else {
-document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒 ";
 }
-}
-/*********可以修改 结束**********/
 setInterval(siteTime, 1000);
 
 
