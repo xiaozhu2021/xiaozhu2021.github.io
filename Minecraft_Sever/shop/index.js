@@ -36,11 +36,18 @@ setInterval(siteTime, 1000);
 
 */
 
-function GetQueryString(name)
-{
-     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-     var r = window.location.search.substr(1).match(reg);
-     if(r!=null)return  unescape(r[2]); return null;
-};
-var from = GetQueryString("from");
-console.log("来自 " + from);
+// 浏览器标题切换  
+var OriginTitile = document.title;    // 保存之前页面标题  
+var titleTime;  
+document.addEventListener('visibilitychange', function(){  
+    if (document.hidden){  
+        document.title = '看不见我-看不见我！';  
+        clearTimeout(titleTime);  
+    }else{  
+        document.title = '哎~还是发现了~';  
+        titleTime = setTimeout(function() {  
+            document.title = OriginTitile;  
+        }, 1800); // 2秒后恢复原标题  
+    }  
+});  
+
